@@ -1,0 +1,301 @@
+@import '~rsuite/lib/styles/themes/default/index.less'; //The default style file.
+@import 'custom-theme.less'; // Style customization.
+@secondary-color: #86cf69;
+
+html, body, .App, #root {
+  height: 100% !important;
+  * {
+    box-sizing: border-box !important;
+  }
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+
+}
+.bg-primary {
+  background-color: @primary-bg-color;
+}
+.z-index-10 {
+  z-index: 10;
+}
+.overlay {
+  top:0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #000000;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.vh-50 {
+  height: 50vh;
+}
+
+.absolute-centered {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  display: flex;
+  i {
+    color:#ffffff;
+  }
+}
+
+.container {
+  width: 992px !important;
+  margin: 0 auto;
+  @media (max-width: 991px) {
+    max-width: 100%;
+  }
+}
+
+.background-white {
+  background-color: #ffffff !important;
+}
+
+
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.m-auto {
+  margin: auto !important;
+}
+
+.fit {
+  width: fit-content !important;
+  height: fit-content !important;
+}
+
+.w-fit {
+  width: fit-content !important;
+}
+
+.w-max {
+  width: max-content !important;
+}
+
+.w-min {
+  width: min-content !important;
+}
+
+.h-fit {
+  height: fit-content !important;
+}
+
+.h-max {
+  height: max-content !important;
+}
+
+.h-min {
+  height: min-content !important;
+}
+
+
+
+.fit {
+  width: fit-content !important;
+  height: fit-content !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute !important;
+}
+
+
+//FLEX
+
+
+.flex-end {
+
+  display: flex;
+
+  align-items: flex-end;
+
+}
+.flex-1 {
+  flex:1;
+  display: flex;
+}
+
+.flex-column {
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+.flex-space-center {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.flex-space-start {
+
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+
+}
+
+.flex-column-center {
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.flex-column-stretch {
+
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+
+}
+.flex-wrap {
+
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.flex-align-center {
+
+  display: flex;
+  align-items: center;
+
+}
+
+.flex-align-stretch {
+  display: flex;
+  align-items: stretch;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-align-baseline {
+
+  display: flex;
+  align-items: baseline;
+
+}
+
+.flex-align-start {
+
+  display: flex;
+  align-items: start;
+
+}
+
+.flex-align-end {
+
+  display: flex;
+  align-items: end;
+
+}
+
+.flex {
+
+  display: flex;
+
+}
+
+//antd overrides
+
+.ant-upload-picture-card-wrapper {
+  width: fit-content;
+}
+
+//transition
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.custom-exiting,
+.custom-entering {
+  animation: .3s linear;
+  animation-fill-mode: forwards;
+}
+
+.custom-exiting {
+  animation-name: zoomOut;
+}
+
+.custom-entering {
+  animation-name: zoomIn;
+}
+
+.custom-entered {
+  opacity: 1;
+}
+
+.custom-exited {
+  opacity: 0;
+}
+
+
